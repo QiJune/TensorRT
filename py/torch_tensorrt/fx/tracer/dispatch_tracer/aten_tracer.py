@@ -56,14 +56,12 @@ class DynamoConfig:
         torchdynamo.config.capture_scalar_outputs = self.capture_scalar_outputs
         torchdynamo.config.guard_nn_modules = self.guard_nn_modules
         torchdynamo.config.dynamic_shapes = self.dynamic_shapes
-        torchdynamo.config.specialize_int_float = self.specialize_int_float
         torchdynamo.config.verbose = self.verbose
 
     def deactivate(self) -> None:
         torchdynamo.config.capture_scalar_outputs = True
         torchdynamo.config.guard_nn_modules = True
         torchdynamo.config.dynamic_shapes = True
-        torchdynamo.config.specialize_int_float = True
         torchdynamo.config.verbose = True
 
 
